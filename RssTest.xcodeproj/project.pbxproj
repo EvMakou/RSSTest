@@ -16,6 +16,7 @@
 		716AED6A1F61ED9A007FBB95 /* RssTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 716AED691F61ED9A007FBB95 /* RssTestTests.m */; };
 		716AED751F61ED9A007FBB95 /* RssTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 716AED741F61ED9A007FBB95 /* RssTestUITests.m */; };
 		716AED841F61EE89007FBB95 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716AED831F61EE89007FBB95 /* DetailViewController.m */; };
+		71BEE3171F68912100E4226D /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71BEE3161F68912100E4226D /* CustomTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		716AED761F61ED9A007FBB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716AED821F61EE89007FBB95 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		716AED831F61EE89007FBB95 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		71BEE3151F68912000E4226D /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		71BEE3161F68912100E4226D /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				716AED531F61ED9A007FBB95 /* AppDelegate.m */,
 				716AED551F61ED9A007FBB95 /* ViewController.h */,
 				716AED561F61ED9A007FBB95 /* ViewController.m */,
+				71BEE3151F68912000E4226D /* CustomTableViewCell.h */,
+				71BEE3161F68912100E4226D /* CustomTableViewCell.m */,
 				716AED581F61ED9A007FBB95 /* Main.storyboard */,
 				716AED5B1F61ED9A007FBB95 /* Assets.xcassets */,
 				716AED5D1F61ED9A007FBB95 /* LaunchScreen.storyboard */,
@@ -281,6 +286,7 @@
 				716AED571F61ED9A007FBB95 /* ViewController.m in Sources */,
 				716AED541F61ED9A007FBB95 /* AppDelegate.m in Sources */,
 				716AED511F61ED9A007FBB95 /* main.m in Sources */,
+				71BEE3171F68912100E4226D /* CustomTableViewCell.m in Sources */,
 				716AED841F61EE89007FBB95 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RssTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.machoman.RssTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,8 +451,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RssTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.machoman.RssTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -517,6 +524,7 @@
 				716AED7B1F61ED9A007FBB95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		716AED7C1F61ED9A007FBB95 /* Build configuration list for PBXNativeTarget "RssTestTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +533,7 @@
 				716AED7E1F61ED9A007FBB95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		716AED7F1F61ED9A007FBB95 /* Build configuration list for PBXNativeTarget "RssTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +542,7 @@
 				716AED811F61ED9A007FBB95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

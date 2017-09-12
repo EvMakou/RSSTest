@@ -13,7 +13,8 @@
 @end
 
 @implementation DetailViewController
-
+@synthesize webView;
+@synthesize actIndicator;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -27,9 +28,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURL *myURL = [NSURL URLWithString: [self.url stringByAddingPercentEscapesUsingEncoding:
-                                          NSUTF8StringEncoding]];
+//    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+//    spinner.center = CGPointMake(160, 240);
+//    spinner.tag = 12;
+//    [self.view addSubview:spinner];
+//    [spinner startAnimating];
+    //[spinner release];
+    NSURL *myURL = [NSURL URLWithString:
+                    [self.url stringByAddingPercentEncodingWithAllowedCharacters:
+                     [NSCharacterSet URLFragmentAllowedCharacterSet]]];
     NSURLRequest *request = [NSURLRequest requestWithURL:myURL];
+    
     [self.webView loadRequest:request];
 }
 
@@ -38,7 +47,24 @@
 {
     [super didReceiveMemoryWarning];
     
+    
 }
 
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    [actIndicator startAnimating];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"Finishes");
+    //[[self.view viewWithTag:12] stopAnimating];
+    [actIndicator stopAnimating];
+}
+
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
+    
+    //[self removeLoadingView];
+    NSLog(@"Error for WEBVIEW: %@", [error description]);
+}
 
 @end

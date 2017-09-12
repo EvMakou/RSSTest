@@ -19,6 +19,7 @@
 
 @end
 @implementation ViewController
+//@synthesize tableView;
 - (void)awakeFromNib
 {
     [super awakeFromNib];
@@ -33,10 +34,15 @@
     [parser setDelegate:self];
     [parser setShouldResolveExternalEntities:NO];
     [parser parse];
-    
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
     
 }
 #pragma mark - Table View
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -48,7 +54,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey: @"title"];
+    //cell.textLabel.text = [[feeds objectAtIndex:indexPath.row] objectForKey: @"title"];
+    UILabel* labelName = (UILabel*) [cell viewWithTag:102];
+    labelName.text =  [[feeds objectAtIndex:indexPath.row] objectForKey: @"title"];
     return cell;
 }
 

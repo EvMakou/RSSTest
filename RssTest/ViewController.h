@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CustomTableViewCell.h"
 @interface ViewController : UITableViewController <NSXMLParserDelegate>
 //@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 
 @end

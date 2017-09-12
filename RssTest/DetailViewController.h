@@ -11,7 +11,8 @@
 @interface DetailViewController : UIViewController
 @property (strong, nonatomic) NSString *url;
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (assign, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *actIndicator;
 
 
 @end
